@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Run custom pre-commits
+set -e
+#echo "Running custom pre-commits"
+BASEDIR=$(dirname $0)
+source $BASEDIR/settings.sh
+
+$PYTHON_PATH $BASEDIR/pre-commits/local-user.py

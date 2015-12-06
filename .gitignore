@@ -1,0 +1,3 @@
+venv/
+*.pyc
+template/hooks/settings.sh

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Building virtualenv for hook requirements..."
+virtualenv venv
+
+./venv/bin/pip install -r requirements.txt
+
+echo "export PYTHON_PATH=$(pwd)/venv/bin/python" > template/hooks/settings.sh
+
+
+echo "Installing $(pwd)/template as git template folder..."
+
+git config --global init.templatedir $(pwd)/template
+git config --global clone.templatedir $(pwd)/template
