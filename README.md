@@ -12,6 +12,7 @@ My git template folder
 > ./INSTALL
 ```
 The INSTALL script will:
+
 1. build a virtualenv in the root `git-template` directory called `venv`
 1. install the requirements.txt into that virtualenv
 1. write the full path of the `venv/bin/python` (to be exported) to `template/hooks/settings.sh`
